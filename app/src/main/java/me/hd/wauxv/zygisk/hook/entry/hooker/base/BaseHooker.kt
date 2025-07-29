@@ -1,4 +1,4 @@
-package me.hd.wauxv.zygisk.hook.hooker.base
+package me.hd.wauxv.zygisk.hook.entry.hooker.base
 
 abstract class BaseHooker {
     abstract val name: String

@@ -8,8 +8,8 @@ import org.lsposed.lsparanoid.Obfuscate
 object ApplicationHook {
     fun init(packageName: String, classloader: ClassLoader) {
         when (packageName) {
-            "com.tencent.mm" -> WechatEntry.load(classloader)
-            "com.tencent.mobileqq", "com.tencent.tim" -> QQTimEntry.load(classloader)
+            "com.tencent.mm" -> WechatEntry.init(classloader)
+            "com.tencent.mobileqq", "com.tencent.tim" -> QQTimEntry.init(classloader)
         }
     }
 }
