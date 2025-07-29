@@ -6,7 +6,7 @@ plugins {
 }
 
 zygisk {
-    packages("com.tencent.mm")
+    packages("com.tencent.mm", "com.tencent.mobileqq", "com.tencent.tim")
 
     id = "me_hd_wauxv_zygisk"
     name = "WauxvZygisk"

@@ -5,7 +5,7 @@ import com.v7878.r8.annotations.DoNotObfuscate
 import com.v7878.r8.annotations.DoNotObfuscateType
 import com.v7878.r8.annotations.DoNotShrink
 import com.v7878.r8.annotations.DoNotShrinkType
-import me.hd.wauxv.zygisk.hook.LoadedApkHook
+import me.hd.wauxv.zygisk.hook.core.LoadedApkHook
 import org.lsposed.lsparanoid.Obfuscate
 
 @Obfuscate

@@ -1,4 +1,4 @@
-package me.hd.wauxv.zygisk.hook
+package me.hd.wauxv.zygisk.hook.core
 
 import android.util.Log
 import com.highcapable.kavaref.KavaRef.Companion.asResolver
