@@ -1,5 +1,8 @@
 package me.hd.wauxv.zygisk.hook.entry.hooker.wx.data
 
+import org.lsposed.lsparanoid.Obfuscate
+
+@Obfuscate
 object WxVerData {
     enum class WxVersion(val code: Int) {
         V8_0_40(2420),

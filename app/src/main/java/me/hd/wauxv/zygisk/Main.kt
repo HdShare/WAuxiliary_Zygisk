@@ -1,6 +1,5 @@
 package me.hd.wauxv.zygisk
 
-import android.util.Log
 import com.v7878.r8.annotations.DoNotObfuscate
 import com.v7878.r8.annotations.DoNotObfuscateType
 import com.v7878.r8.annotations.DoNotShrink
@@ -12,16 +11,18 @@ import org.lsposed.lsparanoid.Obfuscate
 @DoNotShrinkType
 @DoNotObfuscateType
 object Main {
-    var TAG: String = "WAuxiliary"
+    @JvmStatic
+    @DoNotShrink
+    @DoNotObfuscate
+    @Throws(Throwable::class)
+    fun premain() {
+    }
 
     @JvmStatic
     @DoNotShrink
     @DoNotObfuscate
+    @Throws(Throwable::class)
     fun main() {
-        try {
-            LoadedApkHook.init()
-        } catch (th: Throwable) {
-            Log.e(TAG, "Throwable", th)
-        }
+        LoadedApkHook.init()
     }
 }

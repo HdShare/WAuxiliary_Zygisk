@@ -2,8 +2,10 @@ package me.hd.wauxv.zygisk.hook.entry.hooker.wx.data
 
 import com.highcapable.kavaref.KavaRef.Companion.resolve
 import com.highcapable.kavaref.extension.toClass
+import org.lsposed.lsparanoid.Obfuscate
 import kotlin.properties.Delegates
 
+@Obfuscate
 object WxHostData {
     var appClassLoader by Delegates.notNull<ClassLoader>()
     var verName by Delegates.notNull<String>()
@@ -18,4 +20,6 @@ object WxHostData {
             verClient = firstField { name = "CLIENT_VERSION_ARM64" }.get<String>()!!
         }
     }
+
+    fun toVerStr() = "$verName($verCode)_$verClient"
 }

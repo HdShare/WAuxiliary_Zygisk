@@ -3,8 +3,10 @@ package me.hd.wauxv.ui
 import android.app.Activity
 import android.os.Bundle
 import android.util.Log
+import org.lsposed.lsparanoid.Obfuscate
 import org.luckypray.dexkit.DexKitBridge
 
+@Obfuscate
 class DexObfActivity : Activity() {
     private fun log(msg: String) {
         Log.i("WAuxiliary", msg)

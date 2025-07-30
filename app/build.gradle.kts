@@ -9,11 +9,11 @@ zygisk {
     packages("com.tencent.mm", "com.tencent.mobileqq", "com.tencent.tim")
 
     id = "me_hd_wauxv_zygisk"
-    name = "WauxvZygisk"
+    name = "WAuxv Zygisk"
     author = "HdShare"
-    description = "WAuxvZygisk_v${GitVersion.getBuildVersionName(rootProject)}"
+    description = "WAuxv-Zygisk-v${GitVersion.getBuildVersionName(rootProject)}"
     entrypoint = "me.hd.wauxv.zygisk.Main"
-    archiveName = "WAuxvZygisk_v${GitVersion.getBuildVersionName(rootProject)}"
+    archiveName = "WAuxv-Zygisk-v${GitVersion.getBuildVersionName(rootProject)}"
     updateJson = "https://raw.githubusercontent.com/HdShare/WAuxvZygisk/main/updates/update.json"
 }
 
