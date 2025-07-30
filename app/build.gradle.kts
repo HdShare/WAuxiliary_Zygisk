@@ -57,4 +57,5 @@ dependencies {
     implementation(libs.androidvmtools)
     implementation(libs.kavaref.core)
     implementation(libs.kavaref.extension)
+    implementation(libs.dexkit)
 }

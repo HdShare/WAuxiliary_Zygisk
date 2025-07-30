@@ -4,6 +4,7 @@ kotlin = "2.0.21"
 r8annotations = "v0.0.3"
 androidvmtools = "506b66f31b"
 kavarefCore = "1.0.1"
+dexkit = "2.0.6"
 eclipseJgit = "7.3.0.202506031305-r"
 zygisk = "c6a38eeb2a"
 lsparanoid = "0.6.0"
@@ -13,6 +14,7 @@ r8-annotations = { module = "com.github.vova7878:R8Annotations", version.ref = "
 androidvmtools = { module = "com.github.vova7878:AndroidVMTools", version.ref = "androidvmtools" }
 kavaref-core = { module = "com.highcapable.kavaref:kavaref-core", version.ref = "kavarefCore" }
 kavaref-extension = { module = "com.highcapable.kavaref:kavaref-extension", version.ref = "kavarefCore" }
+dexkit = { module = "org.luckypray:dexkit", version.ref = "dexkit" }
 android-gradle = { module = "com.android.tools.build:gradle", version.ref = "agp" }
 kotlin-gradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 eclipse-jgit = { module = "org.eclipse.jgit:org.eclipse.jgit", version.ref = "eclipseJgit" }
