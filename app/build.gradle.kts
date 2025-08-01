@@ -14,7 +14,6 @@ zygisk {
     description = "WAuxv-Zygisk-v${GitVersion.getBuildVersionName(rootProject)}"
     entrypoint = "me.hd.wauxv.zygisk.Main"
     archiveName = "WAuxv-Zygisk-v${GitVersion.getBuildVersionName(rootProject)}"
-    updateJson = "https://raw.githubusercontent.com/HdShare/WAuxvZygisk/main/updates/update.json"
 }
 
 android {
