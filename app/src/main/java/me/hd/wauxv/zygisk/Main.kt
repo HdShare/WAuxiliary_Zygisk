@@ -16,6 +16,7 @@ object Main {
     @DoNotObfuscate
     @Throws(Throwable::class)
     fun premain() {
+        System.loadLibrary("wauxv-zygisk")
     }
 
     @JvmStatic
