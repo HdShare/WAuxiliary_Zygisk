@@ -27,8 +27,8 @@ object LoadedApkHook {
     }
 
     fun init() {
-        val target = "android.app.LoadedApk".toClass().resolve().firstMethod { name = "createOrUpdateClassLoaderLocked" }.self
-        val hooker = LoadedApkHook::class.resolve().firstMethod { name = "createOrUpdateClassLoaderLocked" }.self
-        Hooks.hookSwap(target, EntryPointType.CURRENT, hooker, EntryPointType.DIRECT)
+        val target = "android.app.LoadedApk".toClass().resolve().firstMethod { name = "createOrUpdateClassLoaderLocked" }
+        val hooker = LoadedApkHook::class.resolve().firstMethod { name = "createOrUpdateClassLoaderLocked" }
+        Hooks.hookSwap(target.self, EntryPointType.CURRENT, hooker.self, EntryPointType.DIRECT)
     }
 }

@@ -1,10 +1,10 @@
-package me.hd.wauxv.zygisk.hook.entry.hooker.wx.data
+package me.hd.wauxv.zygisk.hook.apps.wx.data
 
 import org.lsposed.lsparanoid.Obfuscate
 
 @Obfuscate
-object WxVerData {
-    enum class WxVersion(val code: Int) {
+object VerData {
+    enum class Version(val code: Int) {
         V8_0_40(2420),
         V8_0_41(2440),
         V8_0_42(2460),
@@ -28,5 +28,5 @@ object WxVerData {
         V8_0_62(2900),
     }
 
-    fun isAtLeast(version: WxVersion) = WxHostData.verCode >= version.code
+    fun isAtLeast(version: Version) = HostData.verCode >= version.code
 }
