@@ -20,7 +20,7 @@ object SupportReplyHooker : BaseHooker() {
         return true
     }
 
-    override fun load() {
+    override fun onLoad() {
         val target = "com.tencent.mobileqq.ark.api.impl.ArkHelperImpl".toAppClass().resolve().firstMethod { name = "isSupportReply" }
         val hooker = SupportReplyHooker::class.resolve().firstMethod { name = "isSupportReply" }
         Hooks.hook(target.self, hooker.self, Hooks.EntryPointType.DIRECT)
