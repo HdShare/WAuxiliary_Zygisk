@@ -13,4 +13,6 @@ object HostData {
     fun init(loader: ClassLoader) {
         appClassLoader = loader
     }
+
+    fun toVerStr() = ""
 }

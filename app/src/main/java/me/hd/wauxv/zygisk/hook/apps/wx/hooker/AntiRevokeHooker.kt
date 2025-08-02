@@ -4,6 +4,7 @@ import com.highcapable.kavaref.KavaRef.Companion.resolve
 import com.v7878.r8.annotations.DoNotObfuscate
 import com.v7878.r8.annotations.DoNotShrink
 import com.v7878.vmtools.Hooks
+import com.v7878.vmtools.Hooks.EntryPointType
 import me.hd.wauxv.zygisk.hook.apps.wx.base.BaseHooker
 import me.hd.wauxv.zygisk.hook.apps.wx.data.HostData.toAppClass
 import me.hd.wauxv.zygisk.hook.apps.wx.data.VerData
@@ -46,6 +47,6 @@ object AntiRevokeHooker : BaseHooker() {
             else -> return
         }
         val hooker = AntiRevokeHooker::class.resolve().firstMethod { name = "doRevokeMsg" }
-        Hooks.hook(target.self, hooker.self, Hooks.EntryPointType.DIRECT)
+        Hooks.hook(target.self, hooker.self, EntryPointType.DIRECT)
     }
 }
