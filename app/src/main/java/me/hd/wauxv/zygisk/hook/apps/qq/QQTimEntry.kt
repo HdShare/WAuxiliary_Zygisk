@@ -9,7 +9,11 @@ import org.lsposed.lsparanoid.Obfuscate
 object QQTimEntry {
     fun init(loader: ClassLoader) {
         HostData.init(loader)
-        SupportReplyHooker.load()
-        EmoReplyMenuHooker.load()
+        listOf(
+            SupportReplyHooker,
+            EmoReplyMenuHooker,
+        ).forEach { hooker ->
+            hooker.load()
+        }
     }
 }

@@ -20,7 +20,7 @@ object AntiRevokeHooker : BaseHooker() {
     private fun doRevokeMsg() {
     }
 
-    override fun onLoad() {
+    override fun initOnce() {
         val target = when {
             VerData.isAtLeast(VerData.Version.V8_0_62) -> "fs0.s".toAppClass().resolve().firstMethod { name = "k" }
             VerData.isAtLeast(VerData.Version.V8_0_61) -> "pr0.s".toAppClass().resolve().firstMethod { name = "m" }

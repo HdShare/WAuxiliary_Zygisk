@@ -10,6 +10,10 @@ object WechatEntry {
     fun init(loader: ClassLoader) {
         HostData.init(loader)
         WLog.info("running on: ${HostData.toVerStr()}")
-        AntiRevokeHooker.load()
+        listOf(
+            AntiRevokeHooker,
+        ).forEach { hooker ->
+            hooker.load()
+        }
     }
 }

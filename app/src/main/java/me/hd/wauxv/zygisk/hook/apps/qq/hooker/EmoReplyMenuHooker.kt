@@ -19,7 +19,7 @@ object EmoReplyMenuHooker : BaseHooker() {
     private fun getEmoReplyMenuView() {
     }
 
-    override fun onLoad() {
+    override fun initOnce() {
         val target = "com.tencent.qqnt.aio.api.impl.AIOEmoReplyMenuApiImpl".toAppClass().resolve().firstMethod { name = "getEmoReplyMenuView" }
         val hooker = EmoReplyMenuHooker::class.resolve().firstMethod { name = "getEmoReplyMenuView" }
         Hooks.hook(target.self, hooker.self, Hooks.EntryPointType.DIRECT)
