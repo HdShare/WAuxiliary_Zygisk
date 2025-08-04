@@ -28,5 +28,21 @@ object VerData {
         V8_0_62(2900),
     }
 
-    fun isAtLeast(version: Version) = HostData.verCode >= version.code
+    fun isAtLeast(version: Version) = !HostData.isPlay && HostData.verCode >= version.code
+
+    @Obfuscate
+    enum class PlayVersion(val code: Int) {
+        V8_0_41(2420),
+        V8_0_48(2580),
+        V8_0_49(2680),
+        V8_0_51(2700),
+        V8_0_54(2740),
+        V8_0_56(2780),
+        V8_0_57(2800),
+        V8_0_58(2820),
+        V8_0_60(2840),
+        V8_0_61(2860),
+    }
+
+    fun isAtLeastPlay(version: PlayVersion) = HostData.isPlay && HostData.verCode >= version.code
 }

@@ -23,6 +23,16 @@ object AntiRevokeHooker : BaseHooker() {
 
     override fun initOnce() {
         val target = when {
+            VerData.isAtLeastPlay(VerData.PlayVersion.V8_0_61) -> "zs0.s".toAppClass().resolve().firstMethod { name = "h" }
+            VerData.isAtLeastPlay(VerData.PlayVersion.V8_0_60) -> "vr0.t".toAppClass().resolve().firstMethod { name = "k" }
+            VerData.isAtLeastPlay(VerData.PlayVersion.V8_0_58) -> "gr0.s".toAppClass().resolve().firstMethod { name = "k" }
+            VerData.isAtLeastPlay(VerData.PlayVersion.V8_0_57) -> "yp0.t".toAppClass().resolve().firstMethod { name = "k" }
+            VerData.isAtLeastPlay(VerData.PlayVersion.V8_0_56) -> "dp0.t".toAppClass().resolve().firstMethod { name = "l" }
+            VerData.isAtLeastPlay(VerData.PlayVersion.V8_0_54) -> "io0.t".toAppClass().resolve().firstMethod { name = "k" }
+            VerData.isAtLeastPlay(VerData.PlayVersion.V8_0_51) -> "tn0.t".toAppClass().resolve().firstMethod { name = "l" }
+            VerData.isAtLeastPlay(VerData.PlayVersion.V8_0_49) -> "wk0.t".toAppClass().resolve().firstMethod { name = "i" }
+            VerData.isAtLeastPlay(VerData.PlayVersion.V8_0_48) -> "rj0.s".toAppClass().resolve().firstMethod { name = "k" }
+            VerData.isAtLeastPlay(VerData.PlayVersion.V8_0_41) -> "yf0.g".toAppClass().resolve().firstMethod { name = "r" }
             VerData.isAtLeast(VerData.Version.V8_0_62) -> "fs0.s".toAppClass().resolve().firstMethod { name = "k" }
             VerData.isAtLeast(VerData.Version.V8_0_61) -> "pr0.s".toAppClass().resolve().firstMethod { name = "m" }
             VerData.isAtLeast(VerData.Version.V8_0_60) -> "wq0.s".toAppClass().resolve().firstMethod { name = "l" }
